@@ -12,8 +12,8 @@ import {
 const Chart = ({ sparklineData }) => {
   const formattedData = sparklineData
     .map((price, idx) => {
-      if (idx % 6 === 0) {
-        const timeToSubtract = 168 - idx;
+      if (idx % 6 === 0) { //if idx /6 has a reminder of 0 then...
+        const timeToSubtract = 168 - idx; //
         const date = moment()
           .subtract(timeToSubtract, "hours")
           .format("ddd h:mma");

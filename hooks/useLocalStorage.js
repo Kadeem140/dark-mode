@@ -3,18 +3,16 @@ import React from 'react'
 
 export function useLocalStorage(key, initalValue) { //key must be set to a string, initalValue can be anything
     const [storedValue, setStoredValue] =useState(() => {
-        
         const item = window.localStorage.getItem(key); //we are looking to see if have something in local
                                                         //storage by  key and get it.
         return item ? JSON.parse(item) : initalValue; // if we have key stored in local storage return it and parse it,
                                                       // if not return initalValue
-                                                    });   
-
-         const setValue(value)  =>{
+             });   
+         const setValue = (value) => {
              setStoredValue(value); //
              window.localStorage.setItem(key, JSON.stringify(value)); //Save to local storage
          }                                         
-        return [storedValue, ];
+        return [storedValue, setValue];
 }
 
 
