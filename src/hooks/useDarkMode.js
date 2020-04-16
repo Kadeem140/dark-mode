@@ -1,5 +1,5 @@
 import React from 'react';
-import {useEffect} from 'react-dom';
+import {useEffect} from 'react';
 import {useLocalStorage} from "./useLocalStorage"
 
 
